@@ -131,16 +131,13 @@ export default function Home() {
     nextStep();
     isLastStep ? handleSubmit(e) : null;
   };
-  console.log(destructuredData);
-  console.log(formData);
   const [isLoading, setIsLoading] = useState(false); // Add a loading state
-  const test = "test";
 
   async function handleSubmit(e: any) {
     e.preventDefault();
     setIsLoading(true); // Set loading to true when submitting the form
     try {
-      const response = await fetch("/api/hello", {
+      const response = await fetch("/api/submit", {
         method: "POST",
         headers: {
           Accept: "application/json",
