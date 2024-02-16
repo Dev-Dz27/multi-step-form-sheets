@@ -10,7 +10,7 @@ import AddonsForm from "@/components/AddonsForm";
 import FinalStep from "@/components/FinalStep";
 import SuccessMessage from "@/components/SuccessMessage";
 import SideBar from "@/components/SideBar";
-import { FormItems } from "./types/types";
+import { FormItems } from "@/app/types/types";
 
 const initialValues: FormItems = {
   name: "",
