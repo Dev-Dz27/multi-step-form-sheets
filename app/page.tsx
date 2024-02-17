@@ -128,6 +128,7 @@ export default function Home() {
     if (Object.values(errors).some((error) => error)) {
       return;
     }
+
     nextStep();
     isLastStep ? handleSubmit(e) : null;
   };

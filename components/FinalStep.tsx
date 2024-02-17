@@ -32,7 +32,6 @@ const FinalStep = ({ yearly, plan, addOns, goTo }: StepProps) => {
     (acc, obj) => acc + obj.price,
     0
   );
-  console.log(totalAddOnsPrice);
 
   return (
     <FormWrapper
@@ -48,12 +47,12 @@ const FinalStep = ({ yearly, plan, addOns, goTo }: StepProps) => {
                   yearly ? "Yearly" : "Monthly"
                 })`}
               </h4>
-              <button
+              {/* <button
                 onClick={() => goTo(1)}
                 className="text-[#6fe79f] text-sm"
               >
                 Change
-              </button>
+              </button> */}
             </div>
             <p className="font-semibold text-white">{`$${
               yearly ? planPrice * 10 : planPrice
