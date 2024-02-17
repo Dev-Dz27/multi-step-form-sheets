@@ -6,7 +6,7 @@ import * as ToggleGroup from "@radix-ui/react-toggle-group";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import FormWrapper from "./FormWrapper";
-import { FormItems } from "@/app/page";
+import { FormItems } from "@/app/types/types"; 
 import arcadeImg from "../public/assets/arcade.png";
 import advancedImg from "../public/assets/game-console.png";
 import proImg from "../public/assets/online-gaming.png";

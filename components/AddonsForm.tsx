@@ -1,4 +1,4 @@
-import { FormItems } from "@/app/page";
+import { FormItems } from "@/app/types/types"; 
 import { Checkbox } from "@/components/ui/checkbox";
 import FormWrapper from "./FormWrapper";
 

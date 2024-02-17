@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import FormWrapper from "./FormWrapper";
 import { Separator } from "@/components/ui/separator";
-import { FormItems } from "@/app/page";
+import { FormItems } from "@/app/types/types"; 
 
 type StepProps = FormItems & {
   goTo: (index: number) => void;
