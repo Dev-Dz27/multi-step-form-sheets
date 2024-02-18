@@ -55,8 +55,10 @@ export default function Home() {
     isFirstStep,
     isLastStep,
     steps,
+    isLoading,
     goTo,
     showSuccessMsg,
+    toggleLoading
   } = useMultiplestepForm(4);
 
   function updateForm(fieldToUpdate: Partial<FormItems>) {
@@ -132,11 +134,10 @@ export default function Home() {
     nextStep();
     isLastStep ? handleSubmit(e) : null;
   };
-  const [isLoading, setIsLoading] = useState(false); // Add a loading state
 
   async function handleSubmit(e: any) {
     e.preventDefault();
-    setIsLoading(true); // Set loading to true when submitting the form
+    toggleLoading(true) // Set loading to true when submitting the form
     try {
       const response = await fetch("/api/submit", {
         method: "POST",
@@ -159,7 +160,7 @@ export default function Home() {
       console.error("Error:", error);
       // Handle error
     } finally {
-      setIsLoading(false); // Reset loading state after API call completes
+      toggleLoading(false)
     }
   }
 
@@ -226,8 +227,10 @@ export default function Home() {
                   <Button
                     type="submit"
                     className="relative text-neutral-200 bg-neutral-900 border border-black/20 shadow-input shadow-black/10 rounded-xl hover:text-white"
+                    disabled={isLoading}
                   >
-                    {isLastStep ? "Confirm" : "Next Step"}
+                   {isLoading ? 'Loading...' : (isLastStep ? "Confirm" : "Next Step")}
+
                   </Button>
                 </div>
               </div>

@@ -9,7 +9,6 @@ export async function POST(req: Request, res: Response) {
   const createdAt = moment().format("DD/MM/YYYY HH:mm");
 
   const body = (await req.json()) as FormItems;
-  console.log(body);
   try {
     const auth = new google.auth.GoogleAuth({
       credentials: {
